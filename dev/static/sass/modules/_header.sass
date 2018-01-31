@@ -10,6 +10,13 @@
         flex-direction: column
         align-items: center
         padding-top: 60px
+        padding-bottom: 50px
+        justify-content: space-between
+
+    &__top
+        padding: 34px 65px 0 160px
+        display: flex
+        align-items: center
         justify-content: space-between
 
 
@@ -48,3 +55,136 @@
 
             &::after
                 bottom: -7px
+
+
+.before-start
+    padding-top: 25px
+
+    &__text
+        color: #fff
+        font-weight: 700
+        font-style: italic
+        white-space: nowrap
+        transform-origin: 0 0
+        margin-bottom: 245px
+        width: 80px
+        letter-spacing: 1.5px
+        transform: rotate(90deg)
+        position: relative
+        left: 53px
+
+.countdown
+    display: table-cell
+    font-weight: normal
+
+    .item
+        display: inline-block
+        vertical-align: bottom
+        position: relative
+        font-weight: 700
+        font-size: 40px
+        line-height: 40px
+        text-align: center
+        color: #fff
+        margin: 15px 0
+        overflow: hidden
+        width: 80px
+
+    .label
+        text-transform: lowercase
+        text-align: center
+        display: block
+        font-weight: 300
+        font-style: italic
+        line-height: normal
+        font-size: 14px
+        color: #fff
+        opacity: .4
+        letter-spacing: .8px
+
+    .separator
+        display: none
+
+
+.social-links
+    display: flex
+    flex-direction: column
+    color: #fff
+    justify-content: center
+    align-content: center
+
+    &__item
+        color: #fff
+        text-decoration: none
+        margin: 10px 0
+
+        &:nth-child(1)
+            width: 9px
+            font-size: 22px
+            margin-left: 2px
+            height: 22px
+
+        &:nth-child(2)
+            width: 18px
+            font-size: 19px
+            height: 19px
+
+        &:nth-child(3)
+            width: 22px
+            font-size: 18px
+            height: 18px
+
+
+.logo
+    display: flex
+    align-items: flex-end
+
+    &__img
+        width: 180px
+        margin-right: 19px
+        position: relative
+        top: 3px
+
+    &__text
+        color: #fff
+        max-width: 145px
+        text-transform: uppercase
+        font-weight: 700
+        font-style: italic
+        line-height: 23px
+        letter-spacing: 3.6px
+
+
+.enter
+    display: flex
+
+    &__item
+        color: #fff
+        font-size: 14px
+        font-weight: 700
+        font-style: italic
+        cursor: pointer
+        position: relative
+        margin: 4px 23px 0
+        letter-spacing: .8px
+
+        &.log-in
+            &::after
+                content: ""
+                background: rgba(255,255,255,.1)
+                position: absolute
+                height: 31px
+                width: 1px
+                top: -4px
+                right: -24px
+
+.select-language
+    margin-left: 25px
+
+    &__selected
+        border-radius: 50%
+        overflow: hidden
+        text-align: center
+        width: 31px
+        height: 31px
+        border: 4px solid #fff

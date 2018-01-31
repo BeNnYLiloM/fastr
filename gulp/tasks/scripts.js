@@ -4,8 +4,7 @@ module.exports = function() {
         'dev/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'dev/libs/slick-carousel/slick/slick.min.js',
         'dev/libs/svg4everybody/dist/svg4everybody.min.js',
-        'dev/libs/mixitup-3/dist/mixitup.min.js',
-        'dev/libs/jquery-ui/jquery-ui.min.js',
+        'dev/libs/jquery-countdown/jquery.countdown.js',
     ];
 
     $.gulp.task('libsJS:dev', () => {
