@@ -1,5 +1,7 @@
 .comparison
     margin-bottom: 100px
+    position: relative
+    z-index: 3
 
     .page-title
         margin-bottom: 80px
@@ -71,3 +73,24 @@
             color: #fff
             letter-spacing: 1px
             min-height: 140px
+
+
+
+@media screen and (max-width: 1400px)
+    .comparison
+        &__top
+            padding-left: 80px
+
+        &__wrap
+            padding-left: 80px
+
+        &__right-side
+            .comparison__item
+                padding-left: 35px
+
+
+@media screen and (max-width: 1100px)
+    .comparison
+        &__right-side
+            .comparison__item
+                padding-left: 35px

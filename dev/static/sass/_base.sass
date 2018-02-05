@@ -46,11 +46,11 @@ img
 .main-wrapper
     position: relative
     min-height: 100%
-    background: url('../img/backgrounds/main-page-bg.jpg') no-repeat center top
+    background: #1c202c url('../img/backgrounds/main-page-bg.jpg') no-repeat center top
 
 
 .wrapper
-    padding-bottom: 0
+    padding-bottom: 192px
 
 
 .container
@@ -87,3 +87,18 @@ img
         height: 72px
         top: 0
         left: -242px
+
+
+
+@media screen and (max-width: 1350px)
+    .page-title
+        padding-left: 230px
+
+        &::before
+            left: -100px
+
+
+
+@media screen and (max-width: 1100px)
+    .page-title
+        font-size: 40px

@@ -6,8 +6,26 @@ html(lang="ru-RU")
     head
         meta(charset="utf-8")
         title #{title}
-        meta(http-equiv='X-UA-Compatible', content="IE = edge")
-        meta(name="viewport" content="width=device-width,initial-scale=1")
+        //meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        //meta(name="viewport" content="width=device-width,initial-scale=1")
+        script.
+            var metaTag = document.createElement('meta');
+            metaTag.name = "viewport";
+            if (screen.width <= 690) {
+                metaTag.content = "width=675, user-scalable=false"
+                window.addEventListener("orientationchange", function () {
+                    viewport = document.querySelector("meta[name=viewport]");
+                    if (window.orientation === 90 || window.orientation === -90) {
+                        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false');
+                    } else {
+                        viewport.setAttribute('content', 'width=675, user-scalable=false');
+                    }
+                    ;
+                }, false);
+            } else {
+                metaTag.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false"
+            };
+            document.getElementsByTagName('head')[0].appendChild(metaTag);
             
         meta(name="keywords" content="")
 

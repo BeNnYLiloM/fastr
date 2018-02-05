@@ -22,7 +22,129 @@
 
 
 .menu
-    display: none
+    position: fixed
+    left: 0
+    top: 0
+    bottom: 0
+    transform: translateX(-370px)
+    width: 370px
+    background: #093ad8
+    z-index: 65
+    padding: 59px 40px 0
+    color: #fff
+    transition: .15s ease-out
+
+    &._open
+        transform: translateX(0)
+
+    &__close-btn
+        width: 16px
+        height: 16px
+        position: absolute
+        right: 40px
+        top: 60px
+        cursor: pointer
+
+        &::before,
+        &::after
+            content: ""
+            background: #fff
+            height: 3px
+            width: 21px
+            top: 0
+            left: 0
+            position: absolute
+            transform-origin: 0 0
+
+        &::before
+            transform: rotate(45deg)
+            top: 0
+            left: 2px
+
+        &::after
+            transform: rotate(-45deg)
+            top: 14px
+
+    &__text
+        font-weight: 700
+        text-transform: uppercase
+        font-style: italic
+        font-size: 13px
+        letter-spacing: 1px
+
+    &__copyright
+        text-align: center
+        width: 100%
+        position: absolute
+        bottom: 52px
+        left: 0
+        font-style: italic
+        color: #fff
+        font-size: 13px
+        letter-spacing: 1px
+
+.navbar
+    margin-top: 55px
+
+    &__nav
+        &__item
+            position: relative
+            height: 76px
+
+            &:hover
+                &::after
+                    background: #fff
+
+            &::after
+                content: ""
+                background: #1644da
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 1px
+                transition: .15s ease-out
+
+        &__link
+            display: flex
+            border: 2px solid #093ad8
+            transition: .15s ease-out
+            height: 100%
+            width: 100%
+            align-items: center
+            font-size: 14px
+            font-weight: 700
+            color: #fff
+            font-style: italic
+            text-decoration: none
+            letter-spacing: 1.2px
+            position: relative
+
+            &:hover
+                border-color: #fff
+                justify-content: center
+
+                .fa
+                    left: 37px
+                    color: #fff
+
+                span
+                    left: 50%
+                    transform: translate(-50%, -50%)
+
+            .fa
+                position: absolute
+                top: 27px
+                left: 0
+                color: #224edc
+                transition: .15s ease-out
+
+            span
+                position: absolute
+                top: 50%
+                left: 28px
+                transition: .15s ease-out
+                transform: translate(0, -50%)
 
 
 .toggle-menu
@@ -189,3 +311,20 @@
         width: 31px
         height: 31px
         border: 4px solid #fff
+
+
+@media screen and (max-width: 890px)
+    .main-header
+        &__top
+            padding: 20px 30px 0 105px
+
+    .logo
+        &__img
+            width: 140px
+
+        &__text
+            font-size: 14px
+            line-height: 17px
+
+    .select-language
+        margin-left: 10px

@@ -1,0 +1,31 @@
+.press-about-us
+    margin-bottom: 90px
+    position: relative
+    z-index: 3
+
+    .page-title
+        margin-bottom: 57px
+
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__item
+        &:hover
+            img
+                filter: grayscale(0)
+
+        img
+            filter: grayscale(1)
+            transition: .3s ease-out
+
+
+
+@media screen and (max-width: 1400px)
+    .press-about-us
+        &__wrap
+            padding-left: 80px
+
+        &__item
+            margin: 0 25px

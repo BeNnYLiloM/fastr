@@ -4,6 +4,7 @@
     padding-top: 66px
     padding-bottom: 69px
     margin-bottom: 99px
+    z-index: 3
 
     &__circles
         position: absolute
@@ -108,3 +109,31 @@
         opacity: 0
         width: 895px
         height: 895px
+
+
+
+@media screen and (max-width: 1400px)
+    .rounds-info
+        background: url('../img/backgrounds/rounds-info-bg-mob.jpg') no-repeat center top
+
+        &__title
+            padding-left: 80px
+
+        &__text
+            padding-left: 80px
+
+        &__wrap
+            padding-left: 80px
+
+        &__item
+            padding: 0 20px
+
+            &::after
+                height: 90%
+                right: 2%
+
+
+@media screen and (max-width: 1130px)
+    .rounds-info
+        &__circles
+            overflow: hidden

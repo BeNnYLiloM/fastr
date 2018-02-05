@@ -1,5 +1,7 @@
 .schema
     margin-bottom: 216px
+    position: relative
+    z-index: 3
 
     &__wrap
         background: url('../img/backgrounds/schema-bg.png') no-repeat -42px top
@@ -57,3 +59,57 @@
         bottom: 225px
         right: 5.7%
         width: 170px
+
+
+@media screen and (max-width: 1350px)
+    .schema
+        &__wrap
+            background: url('../img/backgrounds/schema-bg-mob.png') no-repeat center top
+            max-width: 600px
+            margin: 0 auto
+            height: 800px
+
+        &__logo
+            width: 104px
+            top: 97px
+            left: 40.5%
+
+        &__text
+            font-size: 16px
+            line-height: 20px
+
+        &__text-one
+            top: 208px
+            left: -35px
+
+        &__text-two
+            top: 385px
+            left: 34.8%
+
+        &__text-three
+            top: 210px
+            right: -18px
+
+        &__text-four
+            bottom: 305px
+            left: 48.5%
+
+        &__text-five
+            bottom: 192px
+            left: -5px
+
+        &__text-six
+            bottom: 50px
+            left: 37.2%
+
+        &__text-seven
+            bottom: 208px
+            right: -36px
+
+
+@media screen and (max-width: 900px)
+    .schema
+        margin-bottom: 170px
+
+        &__wrap
+            transform: translateX(50px)

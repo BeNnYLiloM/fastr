@@ -1,0 +1,38 @@
+.vertical-line
+    position: absolute
+    top: 130px
+    right: 104px
+    width: 33px
+    height: 1833px
+    background: url('../img/backgrounds/vertical-line-bg.png') no-repeat 10px 0
+    padding-top: 735px
+
+    &__mouse
+        svg
+            height: 32px
+
+    &__text
+        transform-origin: 0 0
+        white-space: nowrap
+        color: #fff
+        font-weight: 700
+        font-style: italic
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: 13px
+        margin-top: 28px
+        transform: rotate(90deg)
+        margin-left: 21px
+        margin-bottom: 648px
+
+    &__arrows
+        padding-left: 7px
+
+        svg
+            height: 29px
+
+
+@media screen and (max-width: 1440px)
+    .vertical-line
+        visibility: hidden
+        opacity: 0

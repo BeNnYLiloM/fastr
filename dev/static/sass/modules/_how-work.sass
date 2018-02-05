@@ -1,6 +1,7 @@
 .how-work
     position: relative
     padding: 60px 0 211px
+    z-index: 3
 
     .page-title
         margin-bottom: 89px
@@ -11,6 +12,7 @@
         height: 100%
         left: 0
         top: 0
+        //overflow-x: hidden
 
         &__item
             border: 2px solid rgba(255,255,255,.1)
@@ -46,6 +48,21 @@
         z-index: 5
         cursor: pointer
 
+        &:hover
+            .icon
+                transform: translate(-50%, -50%) scale(1.2)
+                opacity: 1
+
+        .icon
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            font-size: 88px
+            color: #fff
+            transition: .25s ease-out
+            opacity: .6
+
 
 @keyframes circlesVideo
     0%
@@ -60,3 +77,13 @@
         opacity: 0
         height: 1125px
         width: 1125px
+
+
+
+@media screen and (max-width: 1440px)
+    .how-work
+        &__video
+            padding-left: 80px
+
+            .icon
+                transform: translate(calc(-50% + 45px), -50%)

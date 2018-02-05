@@ -1,0 +1,50 @@
+.us-rating
+    position: relative
+    z-index: 3
+
+    .page-title
+        margin-bottom: 51px
+
+    &__wrap
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__item
+        margin: 0 25px 19px
+
+        &:hover
+            img
+                filter: grayscale(0)
+
+        &:nth-child(1),
+        &:nth-child(6)
+            margin-left: 0
+
+        &:nth-child(5),
+        &:nth-child(10)
+            margin-right: 0
+
+        img
+            filter: grayscale(1)
+            transition: .3s ease-out
+
+
+
+@media screen and (max-width: 1400px)
+    .us-rating
+        &__wrap
+            padding-left: 80px
+
+
+
+@media screen and (max-width: 1200px)
+    .us-rating
+        &__wrap
+            justify-content: center
+
+        .us-rating__item
+            margin: 0 15px 50px
+            width: 30%
+            text-align: center

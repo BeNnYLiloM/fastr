@@ -1,8 +1,10 @@
 .road-map
+    margin-bottom: -21px
+    position: relative
+    z-index: 3
+
     .page-title
         margin-bottom: 86px
-
-    &__wrap
 
     &__line
         display: flex
@@ -18,54 +20,63 @@
 
         &:nth-child(1)
             .road-map__text .inner-block
-                width: 420px
+                //width: 420px
+                width: 90.3%
 
         &:nth-child(2)
             .road-map__text .inner-block
-                width: 395px
+                //width: 395px
+                width: 85.4%
 
         &:nth-child(3)
             .road-map__text .inner-block
-                width: 235px
+                //width: 235px
+                width: 50.6%
 
         &:nth-child(4)
             .road-map__text .inner-block
-                width: 390px
+                //width: 390px
+                width: 84.3%
 
         &:nth-child(5)
             .road-map__text .inner-block
-                width: 170px
+                //width: 170px
+                width: 36.6%
 
         &:nth-child(6)
             .road-map__text .inner-block
-                width: 350px
+                //width: 350px
+                width: 75.7%
 
         &:nth-child(7)
             .road-map__text .inner-block
-                width: 250px
+                //width: 250px
+                width: 53.8%
 
         &:nth-child(8)
             .road-map__text .inner-block
-                width: 310px
+                //width: 310px
+                width: 67%
 
         &:nth-child(9)
             .road-map__text .inner-block
-                width: 310px
+                //width: 310px
+                width: 67.1%
 
         &:nth-child(odd)
             .road-map__text
                 text-align: right
-                width: 465px
                 margin-right: 26px
 
                 .inner-block
                     text-align: right
 
         &:nth-child(even)
-            .road-map__year
-                width: 465px
-                text-align: right
-                margin-right: 26px
+            .road-map
+                &__year
+                    text-align: right
+                    margin-right: 26px
+                    padding: 0
 
         &::after
             content: ""
@@ -73,7 +84,8 @@
             position: absolute
             top: 220px
             left: 50%
-            transform: translateX(-50%)
+            //transform: translateX(-50%)
+            margin-left: -4px
             width: 8px
             height: 172px
 
@@ -83,6 +95,7 @@
         line-height: 30px
         color: #fff
         letter-spacing: 1px
+        width: 39.4%
 
         .inner-block
             display: inline-block
@@ -99,6 +112,15 @@
         color: #53c6ff
         letter-spacing: 1px
         margin-right: 30px
+
+        &::before
+            content: ""
+            background: url('../img/icons/roads-circle-shadow.png') no-repeat
+            position: absolute
+            top: -95px
+            left: -95px
+            width: 388px
+            height: 388px
 
         .circle-one,
         .circle-two,
@@ -135,6 +157,7 @@
         color: #53c6ff
         font-size: 40px
         letter-spacing: 2.6px
+        width: 39.4%
 
 
 @keyframes roadCircles
@@ -143,3 +166,32 @@
 
     100%
         transform: translate(-50%, -50%) rotate(360deg)
+
+
+
+@media screen and (max-width: 1350px)
+    .road-map
+        &__wrap
+            padding-left: 80px
+
+        &__line
+            &::after
+                margin-left: -30px
+
+
+@media screen and (max-width: 1350px)
+    .road-map
+        &__text
+            width: 36.4%
+
+        &__year
+            width: 36.4%
+
+
+
+@media screen and (max-width: 1150px)
+    .road-map
+        &__line
+            &::after
+                margin-left: 0
+                transform: translateX(-50%)

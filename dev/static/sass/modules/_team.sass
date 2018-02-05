@@ -1,0 +1,182 @@
+.team
+    position: relative
+    z-index: 3
+
+    .page-title
+        margin-bottom: 77px
+
+    .circles
+        position: absolute
+        top: 266px
+        left: 50%
+        transform: translateX(-50%)
+        width: 323px
+        height: 323px
+
+        &::before
+            content: ""
+            background: url('../img/icons/team-photo-shadow.png') no-repeat
+            position: absolute
+            top: -190px
+            left: -190px
+            width: 724px
+            height: 724px
+            opacity: .5
+
+        &__item
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            border: 1px solid rgba(255,255,255,.3)
+            width: 323px
+            height: 323px
+            animation: teamCircles 12s linear infinite
+            border-radius: 50%
+
+            &:nth-child(1)
+                animation-delay: 0s
+
+            &:nth-child(2)
+                animation-delay: 2s
+
+            &:nth-child(3)
+                animation-delay: 4s
+
+            &:nth-child(4)
+                animation-delay: 6s
+
+            &:nth-child(5)
+                animation-delay: 8s
+
+            &:nth-child(6)
+                animation-delay: 10s
+
+            &:nth-child(7)
+                animation-delay: 12s
+
+
+
+    .slick-slider .slick-list
+        height: 860px
+
+    &__item
+        width: 340px
+        transition: .4s ease-out
+        margin: 0 39px
+        //transform: scale(.79)
+        text-align: center
+        outline: none
+
+        img
+            filter: grayscale(1)
+            transition: .3s ease-out
+            transform: scale(.9)
+
+    .slick-current
+        transform: translateY(100px)
+
+        img
+            filter: grayscale(0)
+            transform: scale(1)
+
+        & + .slick-slide
+            transform: translateY(290px)
+
+            & + .slick-slide
+                transform: translateY(480px)
+
+    &__img
+        margin-bottom: 36px
+
+    &__name
+        font-size: 20px
+        font-weight: 700
+        font-style: italic
+        color: #fff
+        text-transform: uppercase
+        letter-spacing: 2.4px
+        line-height: 20px
+        margin-bottom: 6px
+
+    &__post
+        font-style: italic
+        color: #53c6ff
+        letter-spacing: 1px
+        margin-bottom: 6px
+
+    &__text
+        font-size: 13px
+        font-style: italic
+        opacity: .2
+        line-height: 20px
+        color: #fff
+        letter-spacing: .8px
+        margin-bottom: 22px
+        
+    &__links
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &__item
+            color: #093ad8
+            font-size: 21px
+            margin: 0 5px
+
+    .slick-dots
+        position: absolute
+        bottom: 105px
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0
+        margin: 0
+        height: 20px
+
+        li
+            list-style: none
+            width: 11px
+            height: 11px
+            line-height: normal
+            margin: 0 15px
+            transition: .15s ease-out
+
+        .slick-active
+            width: 20px
+            height: 20px
+
+            button
+                background: #093ad8
+                width: 20px
+                height: 20px
+
+        button
+            background: none
+            border: none
+            width: 11px
+            height: 11px
+            background: #fff
+            text-indent: -9999px
+            border-radius: 50%
+            padding: 0
+            transition: .15s ease-out
+            cursor: pointer
+            outline: none
+
+
+@keyframes teamCircles
+    0%
+        opacity: 0
+        width: 323px
+        height: 323px
+
+    20%
+        opacity: 1
+
+    100%
+        opacity: 0
+        width: 641px
+        height: 641px
